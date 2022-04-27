@@ -37,10 +37,10 @@ app.post('/', (req, res) => {
         if (req.session.page) {
             var page = req.session.page;
             req.session.page = null;
-            res.render(page);
+            res.redirect(page);
 
         } else {
-            res.render('home');
+            res.redirect('/home');
         }
     } else {
         req.session.auth = false;
@@ -54,7 +54,7 @@ function authRender(req, res, page) {
         res.render(page);
     } else {
         req.session.page = page;
-        res.render('login');
+        res.redirect('/');
     }
 }
 
@@ -73,7 +73,7 @@ app.all('/screen2', (req, res) => {
 app.all('/logout', (req, res) => {
     req.session.auth = false;
     req.session.page = null;
-    res.render('login');
+    res.redirect('/');
 });
 
 // custom 404 page
