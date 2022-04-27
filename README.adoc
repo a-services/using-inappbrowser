@@ -1,0 +1,9 @@
+= Using InAppBrowser
+
+https://using-inappbrowser.herokuapp.com
+
+This site was created to demonstrate events and scripts in
+link:https://github.com/apache/cordova-plugin-inappbrowser[InAppBrowser].
+
+For more information see
+link:https://blog.appery.io/[Appery.io Blog].

@@ -1,0 +1,141 @@
+<h3>Options Supported by Android</h3>
+<p class="lead text-secondary"></p>
+<a id="button2" href="home" class="btn btn-outline-warning mt-1 mb-5"> Home</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Attribute</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <th scope="row">hidden</th>
+        <td>
+set to `yes` to create the browser and load the page, but not show it. The `loadstop` event fires when loading is complete. Omit or set to `no` (default) to have the browser open and load normally.
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">beforeload</th>
+        <td>
+set to enable the `beforeload` event to modify which pages are actually loaded in the browser. Accepted values are `get` to intercept only GET requests, `post` to intercept on POST requests or `yes` to intercept both GET & POST requests. Note that POST requests are not currently supported and will be ignored (if you set `beforeload=post` it will raise an error).
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row">clearcache</th>
+        <td>
+set to `yes` to have the browser's cookie cache cleared before the new window is opened
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">clearsessioncache</th>
+        <td>
+            set to `yes` to have the session cookie cache cleared before the new window is opened
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">closebuttoncaption</th>
+        <td>
+            set to a string to use as the close button's caption instead of a X. Note that you need to localize this value yourself.
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row">closebuttoncolor</th>
+        <td>
+            set to a valid hex color string, for example: `#00ff00`, and it will change the
+close button color from default, regardless of being a text or default X. Only has effect if user has location set to `yes`.
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row">footer</th>
+        <td>
+set to `yes` to show a close button in the footer similar to the iOS __Done__ button.
+The close button will appear the same as for the header hence use __closebuttoncaption__ and __closebuttoncolor__ to set its properties.
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">footercolor</th>
+        <td>
+set to a valid hex color string, for example `#00ff00` or `#CC00ff00` (`#aarrggbb`) , and it will change the footer color from default.
+Only has effect if user has __footer__ set to `yes`.
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row">hardwareback</th>
+        <td>
+set to `yes` to use the hardware back button to navigate backwards through the `InAppBrowser`'s history. If there is no previous page, the `InAppBrowser` will close.  The default value is `yes`, so you must set it to `no` if you want the back button to simply close the InAppBrowser.
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">hidenavigationbuttons</th>
+        <td>
+set to `yes` to hide the navigation buttons on the location toolbar, only has effect if user has location set to `yes`. The default value is `no`.
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row">hideurlbar</th>
+        <td>
+            set to `yes` to hide the url bar on the location toolbar, only has effect if user has location set to `yes`. The default value is `no`.
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row">navigationbuttoncolor</th>
+        <td>
+            set to a valid hex color string, for example: `#00ff00`, and it will change the color of both navigation buttons from default. Only has effect if user has location set to `yes` and not hidenavigationbuttons set to `yes`.
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row">toolbarcolor</th>
+        <td>
+            set to a valid hex color string, for example: `#00ff00`, and it will change the color the toolbar from default. Only has effect if user has location set to `yes`.
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row">lefttoright</th>
+        <td>
+            Set to `yes` to swap positions of the navigation buttons and the close button. Specifically, navigation buttons go to the right and close button to the left. Default value is `no`.
+        </td>
+    </tr>
+
+    <tr>
+        <th scope="row">zoom</th>
+        <td>
+set to `yes` to show Android browser's zoom controls, set to `no` to hide them.  Default value is `yes`.
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">mediaPlaybackRequiresUserAction</th>
+        <td>
+Set to `yes` to prevent HTML5 audio or video from autoplaying (defaults to `no`).
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">shouldPauseOnSuspend</th>
+        <td>
+Set to `yes` to make InAppBrowser WebView to pause/resume with the app to stop background audio (this may be required to avoid Google Play issues like described in [CB-11013](https://issues.apache.org/jira/browse/CB-11013)).
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">useWideViewPort</th>
+        <td>
+Sets whether the WebView should enable support for the "viewport" HTML meta tag or should use a wide viewport. When the value of the setting is `no`, the layout width is always set to the width of the WebView control in device-independent (CSS) pixels. When the value is `yes` and the page contains the viewport meta tag, the value of the width specified in the tag is used. If the page does not contain the tag or does not provide a width, then a wide viewport will be used. (defaults to `yes`).
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">fullscreen</th>
+        <td>
+            Sets whether the InappBrowser WebView is displayed fullscreen or not. In fullscreen mode, the status bar is hidden. Default value is `yes`.
+        </td>
+    </tr>
+</tbody>
+</table>
