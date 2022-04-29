@@ -31,7 +31,7 @@ app.post('/', (req, res) => {
     //console.log('-- [submit] session:',req.session);
     let email = req.body.email;
     let password = req.body.password;
-    //console.log(`-- email: ${email} | password: ${password}`);
+    console.log(`-- [submit] email: ${email} | password: ${password}`);
     if (email === 'test' && password === '123') {
         req.session.auth = true;
         if (req.session.page) {
