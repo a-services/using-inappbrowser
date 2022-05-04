@@ -25,10 +25,12 @@ app.use(session({
 }));
 
 
-app.get('/', (req, res) => res.render('login'));
+app.get('/', (req, res) => res.redirect('login'));
 
-app.post('/', (req, res) => {
-    //console.log('-- [submit] session:',req.session);
+app.get('/login', (req, res) => res.render('login'));
+
+app.post('/login', (req, res) => {
+    console.log('-- [submit] session:',req.session);
     let email = req.body.email;
     let password = req.body.password;
     console.log(`-- [submit] email: ${email} | password: ${password}`);
