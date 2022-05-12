@@ -6,4 +6,4 @@ This site was created to demonstrate events and scripts in
 link:https://github.com/apache/cordova-plugin-inappbrowser[InAppBrowser].
 
 For more information see
-link:https://blog.appery.io/[Appery.io Blog].
+link:https://blog.appery.io/2022/05/how-events-scripts-work-with-inappbrowser-in-appery-io/[Appery.io Blog].
